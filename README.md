@@ -1,8 +1,8 @@
 # slam_lidar_by_myself
 lidar slam developed by myself.
 
-ubuntu 20.04  
-cmake>=3.24.3  
+# ubuntu 20.04  
+# cmake>=3.24.3  
 https://blog.csdn.net/fyc300/article/details/135282561?spm=1001.2014.3001.5506  
 dowanload cmake-3.24.3.tar.gz from: https://cmake.org/files/v3.24/  
 cd cmake-3.24.2  
@@ -10,7 +10,15 @@ cd cmake-3.24.2
 make  
 sudo make install  
 
-eigen:  
+# gcc g++ 10 版本安装
+https://blog.itpub.net/70025954/viewspace-3009033/
+
+# compile
+cmake -Wno-dev ..
+需要将tbb文件拷贝至thirdparty文件夹下面
+确认TBB已经安装在系统上。如果没有安装，需要先安装它。
+
+# eigen:  
 https://blog.csdn.net/qq_62964142/article/details/133346724?spm=1001.2014.3001.5506  
 download eigen 3.4.0 from: https://gitlab.com/libeigen/eigen/-/releases  
 mkdir build  
@@ -18,7 +26,7 @@ cd build
 cmake ..  
 sudo make install  
 
-Sophus  
+# Sophus  
 https://blog.csdn.net/qq_62964142/article/details/133346724?spm=1001.2014.3001.5506  
 安装fmt  
 创建fmt文件夹，在终端打开，输入如下命令：  
@@ -40,7 +48,7 @@ make
 sudo make install  
 # https://blog.csdn.net/qq_62964142/article/details/133346724 
 
-pcl:  
+# pcl:  
 1. 先更新,然后直接安装  
 sudo apt update  
 sudo apt install libpcl-dev  
@@ -49,7 +57,6 @@ sudo apt remove libpcl-dev
 #仅限用上面方式安装的PCL卸载  
 显示pcl版本  
 apt-cache show libpcl-dev  
-
 
 #######################################################################  
 set(CMAKE_CXX_STANDARD 17)  # C++ 17  
